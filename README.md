@@ -72,15 +72,9 @@ A responsive and interactive web app that helps users track their daily health m
 
 
 
-\### 💡 Light Mode
+![Light Mode](light-mode.png)
+![Dark Mode](dark-mode.png)
 
-!\[Light Mode](light-mode.png)
-
-
-
-\### 🌙 Dark Mode
-
-!\[Dark Mode](dark mode.png)
 
 
 
