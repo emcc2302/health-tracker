@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Health Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <div class="theme-top-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider round"></span>
+    </label>
+    <span>Toggle Dark Mode</span>
+  </div>
+
+  <!-- Tracker -->
+  <div class="tracker">
+    <h1>🩺 Daily Health Tracker</h1>
+    <p>Track your health, daily! 📊</p>
+    <div class="card">
+      <label>Date:
+        <input type="date" id="date" />
+      </label>
+
+      <label>🚶 Steps
+        <input type="range" id="steps" min="0" max="10000" step="100" />
+        <span id="stepsValue"></span>
+      </label>
+
+      <label>💧 Water Intake
+        <div id="waterCups" class="water"></div>
+        <span id="waterValue"></span>
+      </label>
+
+      <label>🍽 Calories
+        <input type="range" id="calories" min="0" max="3000" step="50" />
+        <span id="caloriesValue"></span>
+      </label>
+
+      <label>💤 Sleep
+        <input type="range" id="sleep" min="0" max="12" step="0.5" />
+        <span id="sleepValue"></span>
+      </label>
+
+      <label>😄 Mood
+        <div class="moods" id="moods">
+          <button data-mood="Neutral">😐</button>
+          <button data-mood="Okay">🙂</button>
+          <button data-mood="Happy">😊</button>
+          <button data-mood="Tired">😴</button>
+          <button data-mood="Angry">😡</button>
+        </div>
+        <div id="moodLabel"></div>
+      </label>
+
+      <div class="actions">
+        <button onclick="saveTodayData()">💾 Save Today</button>
+        <button onclick="viewReport()">📈 View Weekly Report</button>
+        <button onclick="exportCSV()">📥 Export CSV</button>
+      </div>
+
+      <div id="chartSection" style="display: none;">
+        <canvas id="healthChart" width="400" height="200"></canvas>
+        <div id="highlight"></div>
+      </div>
+
+      <!-- AI Advice -->
+      <div id="adviceBox"></div>
+
+      <footer>
+        Made with ❤️ by Soriful Islam Sk
+      </footer>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #111;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+.tracker {
+  width: 90%;
+  max-width: 540px;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  
+}
+body.dark .tracker {
+  background: #1e1e1e;
+}
+.tracker h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.2rem;
+  padding-top: 1rem;
+}
+.tracker p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+.theme-top-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  z-index: 999;
+}
+
+.card label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 500;
+}
+input[type="range"] {
+  width: 100%;
+}
+#stepsValue, #caloriesValue, #sleepValue, #waterValue {
+  font-weight: bold;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.water {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
+.water div {
+  width: 24px;
+  height: 30px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+.water .filled {
+  background: #3b82f6;
+}
+body.dark .water div {
+  border-color: #666;
+}
+body.dark .water .filled {
+  background: #2196f3;
+}
+
+.moods button {
+  background: none;
+  border: 2px solid transparent;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.moods button.selected {
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+}
+#moodLabel {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+body.dark #moodLabel {
+  color: #ccc;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.actions button {
+  flex: 1;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.actions button:hover {
+  background: #2563eb;
+}
+
+#adviceBox {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff7e6;
+  border: 1px solid #ffd580;
+  border-radius: 10px;
+  color: #663c00;
+  font-weight: 500;
+  white-space: pre-line;
+}
+body.dark #adviceBox {
+  background: #332d1c;
+  border-color: #ccaa66;
+  color: #ffe4a1;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+body.dark footer {
+  color: #aaa;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 22px;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:checked + .slider:before {
+  transform: translateX(18px);
+}

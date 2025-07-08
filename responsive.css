@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .tracker {
+    width: 85%;
+    padding: 1.5rem 1rem;
+  }
+
+  .tracker h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .tracker p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #adviceBox {
+    font-size: 0.95rem;
+  }
+
+  .theme-top-toggle {
+    position: static;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
